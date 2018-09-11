@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>text02</display-name>
+  <servlet>
+  <servlet-name>UserServlet</servlet-name>
+  <servlet-class>servlet.UserServlet </servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>UserServlet</servlet-name>
+  <url-pattern>/user</url-pattern>
+   </servlet-mapping>
+<servlet>
+  <servlet-name>EmployeeServlet</servlet-name>
+  <servlet-class>servlet.EmployeeServlet </servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>EmployeeServlet</servlet-name>
+  <url-pattern>/emp</url-pattern>  
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>DepartmentServlet</servlet-name>
+  <servlet-class>servlet.DepartmentServlet </servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>DepartmentServlet</servlet-name>
+  <url-pattern>/dep</url-pattern>  
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  <servlet-name>ProjectServlet</servlet-name>
+  <servlet-class>servlet.ProjectServlet </servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>ProjectServlet</servlet-name>
+  <url-pattern>/pro</url-pattern>  
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>BaiduServlet</servlet-name>
+  <servlet-class>a.BaiduServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BaiduServlet</servlet-name>
+  <url-pattern>/baidu</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>IndexServlet</servlet-name>
+  <servlet-class>servlet.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>IndexServlet</servlet-name>
+  <url-pattern>/index</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>ScoreServelet</servlet-name>
+  <servlet-class>servlet.ScoreServelet</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ScoreServelet</servlet-name>
+  <url-pattern>/score</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>loginServelet</servlet-name>
+  <servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>loginServelet</servlet-name>
+  <url-pattern>/log</url-pattern>
+  
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>RegisterServlet</servlet-name>
+  <servlet-class>servlet.RegisterServlet</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RegisterServlet</servlet-name>
+  <url-pattern>/reg</url-pattern>
+  </servlet-mapping>
+  <filter>
+  <filter-name>LonginFilter</filter-name>
+  <filter-class>filter.LonginFilter</filter-class>
+  </filter>
+ <filter-mapping>
+ <filter-name>LonginFilter</filter-name>
+ <url-pattern>/emp</url-pattern>
+  <url-pattern>/pro</url-pattern>
+ 
+  <url-pattern>/dep</url-pattern>
+ 
+     <url-pattern>/score</url-pattern>
+  
+   <url-pattern>/index</url-pattern>
+ 
+ </filter-mapping>
+<listener>
+<listener-class>listener.CountListener</listener-class>
+</listener>
+
+<session-config>
+  <session-timeout>20</session-timeout><!--设置session的失效时间  -->
+ </session-config>
+  <welcome-file-list>
+    <welcome-file></welcome-file>
+  
+  </welcome-file-list>
+</web-app>
