@@ -18,7 +18,7 @@ public List<String> search(String a){
 		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/company?characterEncoding=utf-8","root","123");
 		Statement stat= conn.createStatement();
 
-		 String sql="select * from content where content like '"+ a +"%'";
+		 String sql="select * from content where content like '"+ a +"  %'";
 		 ResultSet rs=stat.executeQuery(sql);
 	
 		 while(rs.next()) {
